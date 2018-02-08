@@ -1,7 +1,7 @@
 import * as React from "react";
 import { IDothrakiMicProps } from "./IDothrakiMicProps";
 import { IDothrakiMicState } from "./IDothrakiMicState";
-import { DefaultButton, Label } from 'office-ui-fabric-react/lib';
+import { DefaultButton, Label, IconButton, IButtonProps } from 'office-ui-fabric-react/lib';
 import * as SDK from 'microsoft-speech-browser-sdk';
 
 export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDothrakiMicState> {
@@ -18,25 +18,16 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
 
     render() {
       return (
-        <div className='ms-BasicButtonsTwoUp'>
-          <div>
-            <Label>Standard</Label>
-            <DefaultButton
-              primary={ true }
+        <div className='dothrakiMic-Recorder'>
+            <Label>Press to start translating</Label>
+            <IconButton
               disabled={ this.state.startbtnDisabled }
-              text='Start recording'
-              onClick={ this.startRecording }
+              checked={ this.state.stopbtnDisabled }
+              iconProps={ { iconName: 'Record2' } }
+              title='Record'
+              ariaLabel='Record'
+              onClick={this.startRecording}
             />
-          </div>
-          <div>
-            <Label>Primary</Label>
-            <DefaultButton
-              primary={ true }
-              disabled={ this.state.stopbtnDisabled }
-              text='Stop recording'
-              onClick={ this.stopRecording }
-            />
-          </div>
         </div>
       );
     }
@@ -172,18 +163,10 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
 }
 
     public OnComplete() {
-      this.state = {
-        startbtnDisabled: false,
-        stopbtnDisabled: true,
-        recognizer: this.state.recognizer
-      }
+      this.setState({startbtnDisabled: false, stopbtnDisabled: true});
     }
     public OnSpeechEndDetected() {
-      this.state = {
-        startbtnDisabled: false,
-        stopbtnDisabled: true,
-        recognizer: this.state.recognizer
-      }
+      this.setState({startbtnDisabled: false, stopbtnDisabled: true});
     }
 
     public Setup() {
@@ -208,5 +191,9 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
 
     public UpdateRecognizedPhrase(json) {
       console.log(json);
+    }
+
+    public GetDothrakiDictionay(){
+      
     }
   }
