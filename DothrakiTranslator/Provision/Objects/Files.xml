@@ -1,4 +1,10 @@
 ﻿<pnp:Files xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema">
-  <!--IMAGES-->
+  <!--Images-->
   <pnp:File Src="../../SiteAssets\Images\dothraki.jpg" Folder="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/Images" Overwrite="false" />
+  <pnp:File Src="../../SiteAssets\Images\DothrakiLogo.png" Folder="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/Images" Overwrite="false" />
+  <!--Scripts-->
+  <pnp:File Src="../../SiteAssets\JS\dothraki.js" Folder="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/JS" Overwrite="true" />
+  <!--Style-->
+  <pnp:File Src="../../SiteAssets\CSS\dothraki.css" Folder="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/CSS" Overwrite="true" />
+
 </pnp:Files>

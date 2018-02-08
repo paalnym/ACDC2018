@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security;
+using OfficeDevPnP.Core.Framework.Provisioning.Model;
 
 namespace Provision
 {
@@ -13,7 +14,7 @@ namespace Provision
     {
         static void Main(string[] args)
         {
-            Provision.ProvisionArtifacts("https://acdc1802.sharepoint.com/sites/Test3", "adeel@ACDC1802.onmicrosoft.com");
+            Provision.ProvisionArtifacts("https://acdc1802.sharepoint.com/sites/Test3", "adeel@ACDC1802.onmicrosoft.com");                    
             //CreateSiteCollection();
 
             //Getting first parameter / url
@@ -29,6 +30,8 @@ namespace Provision
         }
 
      
+       
+
         #region: testing purpose 
         private static void CreateSiteCollection()
         {         

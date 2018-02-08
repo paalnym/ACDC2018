@@ -1,0 +1,7 @@
+﻿<pnp:WebSettings xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema"
+      Title="Dothraki Translator"
+      Description="Dothraki Translator"
+      MasterPageUrl="{sitecollection}/_catalogs/MasterPage/Seattle.master"      
+      SiteLogo="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/Images/dothraki.jpg"
+      AlternateCSS="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/CSS/dothraki.css">
+</pnp:WebSettings>

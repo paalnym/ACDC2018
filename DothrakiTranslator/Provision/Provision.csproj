@@ -167,7 +167,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Objects\Files.xml" />
+    <Content Include="Objects\WebSettings.xml" />
+    <Content Include="SiteAssets\CSS\dothraki.css" />
     <Content Include="SiteAssets\Images\dothraki.jpg" />
+    <Content Include="SiteAssets\Images\DothrakiLogo.png" />
+    <Content Include="SiteAssets\JS\dothraki.js" />
     <Content Include="Template.xml" />
   </ItemGroup>
   <ItemGroup />

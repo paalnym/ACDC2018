@@ -7,11 +7,14 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
+// Provision modern team site
+// Style the modern team site
+// Prompt for url to provision on
+
 namespace Provision
 {
     public class Provision
     {
-
         public static void ProvisionArtifacts(string url, string username)
         {            
             using (var context = new ClientContext(url))
@@ -19,7 +22,7 @@ namespace Provision
                 var password = new SecureString();
 
                 SecureString passWord = new SecureString();
-                foreach (char c in "".ToCharArray()) passWord.AppendChar(c);
+                foreach (char c in "Rap80436".ToCharArray()) passWord.AppendChar(c);
                 context.Credentials = new SharePointOnlineCredentials(username, passWord);
 
                 var web = context.Web;
@@ -27,12 +30,10 @@ namespace Provision
                 context.Load(web, w => w.Title);
                 context.ExecuteQuery();
 
-
                 var provider = new XMLFileSystemTemplateProvider(String.Format(@"{0}\..\..\", AppDomain.CurrentDomain.BaseDirectory), string.Empty);
                 var template = provider.GetTemplate("Template.xml");
                 
                 web.ApplyProvisioningTemplate(template);
-
             }
         }
     }
