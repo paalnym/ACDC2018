@@ -1,0 +1,4 @@
+﻿<pnp:Files xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema">
+  <!--IMAGES-->
+  <pnp:File Src="../../SiteAssets\Images\dothraki.jpg" Folder="{sitecollection}/_catalogs/MasterPage/ACDC/SiteAssets/Images" Overwrite="false" />
+</pnp:Files>
