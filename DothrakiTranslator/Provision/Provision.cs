@@ -19,7 +19,7 @@ namespace Provision
                 var password = new SecureString();
 
                 SecureString passWord = new SecureString();
-                foreach (char c in "Rap80436".ToCharArray()) passWord.AppendChar(c);
+                foreach (char c in "".ToCharArray()) passWord.AppendChar(c);
                 context.Credentials = new SharePointOnlineCredentials(username, passWord);
 
                 var web = context.Web;
