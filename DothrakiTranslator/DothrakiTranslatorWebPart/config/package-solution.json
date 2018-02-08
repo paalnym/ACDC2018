@@ -1,0 +1,13 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dothraki-translator-web-part-client-side-solution",
+    "id": "fdf72c5d-dc64-43b7-b934-deba6f19be64",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/dothraki-translator-web-part.sppkg"
+  }
+}

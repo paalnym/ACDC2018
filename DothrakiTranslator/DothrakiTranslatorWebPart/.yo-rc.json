@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.0",
+    "libraryName": "dothraki-translator-web-part",
+    "libraryId": "fdf72c5d-dc64-43b7-b934-deba6f19be64",
+    "environment": "spo"
+  }
+}
