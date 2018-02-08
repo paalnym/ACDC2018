@@ -1,4 +1,3 @@
-C:\ACDC2018\DothrakiTranslator\Provision\obj\Debug\Provision.csprojResolveAssemblyReference.cache
 C:\ACDC2018\DothrakiTranslator\Provision\bin\Debug\Provision.exe.config
 C:\ACDC2018\DothrakiTranslator\Provision\bin\Debug\Provision.exe
 C:\ACDC2018\DothrakiTranslator\Provision\bin\Debug\Provision.pdb

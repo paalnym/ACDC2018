@@ -1,10 +1,12 @@
 ﻿param 
 (     
-	[string]$url = "URL", 
-	[string]$user = "USERNAME", #Username with domain
-	[string]$password = "PASSWORD " #Password for user
+	[string]$path = "Path",
+	[string]$adminTenantUrl = "Admin tenant url",
+	[string]$url = "New Site Collection Url", 
+	[string]$user = "User name", 
+	[string]$password = "Password" 
 	
 )
 
-#Set-Location $exepathcmd
-Start-Process -FilePath .\bin\Debug\Provision.exe -ArgumentList "$url $user $password";
+Set-Location $path
+Start-Process -FilePath .\Provision.exe -ArgumentList "$adminTenantUrl $url $user $password";
