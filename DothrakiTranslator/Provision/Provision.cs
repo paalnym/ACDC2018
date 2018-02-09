@@ -80,7 +80,7 @@ namespace Provision
                 context.Credentials = new SharePointOnlineCredentials(username, securedPassword);
 
                 var web = context.Web;
-                //context.Load(web);
+                //context.Load(web);+
                 context.Load(web, w => w.Title);
                 context.ExecuteQuery();
 

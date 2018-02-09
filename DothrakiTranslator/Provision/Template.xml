@@ -1,14 +1,26 @@
 ﻿<?xml version="1.0"?>
-<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2016/05/ProvisioningSchema">
-  <pnp:Preferences>
-    <pnp:Parameters>
-      <pnp:Parameter Key="CompanyName">Dothraki Translator Inc.</pnp:Parameter>
-    </pnp:Parameters>
-  </pnp:Preferences>
-  <pnp:Templates ID="Container-ACDC">
-    <pnp:ProvisioningTemplate ID="ACDC" Version="1">
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Objects/Files.xml" />
-
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/01/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.23.1802.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-FC2EF7120D374D60BF3550AA789F3071">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-FC2EF7120D374D60BF3550AA789F3071" Version="1" BaseSiteTemplate="STS#0" Scope="RootSite">
+      <pnp:WebSettings NoCrawl="false" WelcomePage="SitePages/Dothraki Transl.aspx" />      
+      <pnp:ComposedLook Name="Tre" ColorFile="{themecatalog}/15/Palette011.spcolor" FontFile="{themecatalog}/15/fontscheme002.spfont" BackgroundFile="/_layouts/15/images/image_bg011.jpg" Version="0" />
+      <pnp:ClientSidePages>
+        <pnp:ClientSidePage PageName="Dothraki Transl.aspx" PromoteAsNewsArticle="false" Overwrite="true">
+          <pnp:Sections>
+            <pnp:Section Order="1" Type="TwoColumnLeft">
+              <pnp:Controls>
+                <pnp:CanvasControl WebPartType="Text" ControlId="4fde94e4-e31d-414b-8b43-41a660187d86" Order="1" Column="1">
+                  <pnp:CanvasControlProperties>
+                    <pnp:CanvasControlProperty Key="Text" Value="" />
+                  </pnp:CanvasControlProperties>
+                </pnp:CanvasControl>
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{ &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;properties&quot;: {&quot;description&quot;:&quot;DothrakiTranslatorWebPart&quot;}}" ControlId="17c924c2-b88f-48a7-8ece-282c71f86752" Order="2" Column="1" />
+              </pnp:Controls>
+            </pnp:Section>
+          </pnp:Sections>
+        </pnp:ClientSidePage>
+      </pnp:ClientSidePages>
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
-</pnp:Provisioning>                                                                      
+</pnp:Provisioning>
