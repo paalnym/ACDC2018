@@ -6537,6 +6537,42 @@ namespace DothrakiTranslatorService
     {
         ""English"":  ""zero"",
         ""Dothraki"":  ""som""
+    },
+    {
+        ""English"":  ""Have you seen my ladys dragon"",
+        ""Dothraki"":  ""Hash yeri ray tih erinak’s zhavorsa""
+    },
+    {
+        ""English"":  ""It's just a flesh wound"",
+        ""Dothraki"":  ""Me zisosh disse""
+    },
+    {
+        ""English"":  ""Have you seen my horse"",
+        ""Dothraki"":  ""Hash yer ray tih hrazef anni""
+    },
+    {
+        ""English"":  ""Is this water drinkable"",
+        ""Dothraki"":  ""Hash me laz indee jin eveth""
+    },
+    {
+        ""English"":  ""Which way to the Mother of Mountains"",
+        ""Dothraki"":  ""Kifinosi me dothrae Maisaan Krazaaji""
+    },
+    {
+        ""English"":  ""Have fun storming the castle"",
+        ""Dothraki"":  ""Anha zalak meme vallayafa yera, jin athvashar okrenegwin""
+    },
+    {
+        ""English"":  ""Say hello to my little friend"",
+        ""Dothraki"":  ""Astas 'M'athchomaroon' okeosaan naqisa anni""
+    },
+    {
+        ""English"":  ""Ride or die"",
+        ""Dothraki"":  ""Che dothras che drivos""
+    },
+    {
+        ""English"":  ""Go walk with your mother"",
+        ""Dothraki"":  ""Ifas maisi yerit""
     }
 ]
 ";
