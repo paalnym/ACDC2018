@@ -19,6 +19,11 @@ namespace Provision
             var userName = args[2];
             var password = args[3];
 
+            //var adminTenantUrl = "https://acdc1802-admin.sharepoint.com";
+            //var url = "https://acdc1802.sharepoint.com/sites/Test22";
+            //var userName = "adeel@ACDC1802.onmicrosoft.com";
+            //var password = "Rap80436";
+
             Provision.CreateSiteCollection(adminTenantUrl, userName, password, url);
             Provision.ProvisionArtifacts(url, userName, password);
         }

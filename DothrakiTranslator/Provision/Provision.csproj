@@ -167,10 +167,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Objects\Files.xml" />
-    <Content Include="Objects\WebSettings.xml" />
+    <Content Include="Objects\WebSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="SiteAssets\CSS\dothraki.css" />
     <Content Include="SiteAssets\Images\dothraki.jpg" />
     <Content Include="SiteAssets\Images\DothrakiLogo.png" />
+    <Content Include="SiteAssets\Images\dothrakis.jpg" />
+    <Content Include="SiteAssets\Images\image_bg011.jpg" />
     <Content Include="SiteAssets\JS\dothraki.js" />
     <Content Include="Template.xml" />
   </ItemGroup>
