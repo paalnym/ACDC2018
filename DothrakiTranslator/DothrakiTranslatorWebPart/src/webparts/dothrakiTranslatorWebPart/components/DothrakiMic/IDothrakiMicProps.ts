@@ -5,6 +5,7 @@ export interface IDothrakiMicProps {
     subscriptionKey: string
 }
 
-export interface Window {
-    SDK: any;
+declare module 'microsoft-speech-browser-sdk' {
+    export var index: any;
 }
+

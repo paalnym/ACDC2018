@@ -12,7 +12,9 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
       this.state = {
         startbtnDisabled: false,
         stopbtnDisabled: true,
-        recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f")
+        recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f"),
+        dothrakiWord: "",
+        englishWord: ""
       }
     }
 
@@ -28,6 +30,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
               ariaLabel='Record'
               onClick={this.startRecording}
             />
+            <Label>{this.state.dothrakiWord}</Label>
         </div>
       );
     }
@@ -176,7 +179,9 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
       this.state = {
         startbtnDisabled: false,
         stopbtnDisabled: true,
-        recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f")
+        recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f"),
+        dothrakiWord: "",
+        englishWord: ""
       }
     }
 
@@ -186,14 +191,30 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
 
     public UpdateRecognizedHypothesis(text, append) {
       if (append) 
-      console.log(text);
+      console.log("UPDATE RECOGNIZEdHypo", text);
     }
 
     public UpdateRecognizedPhrase(json) {
-      console.log(json);
+      console.log("UPDATE RECONGIZEDPHRASE", json);
+      var translationPhraseGroup = JSON.parse(json);
+      var strippedTranslationPhrase = translationPhraseGroup.DisplayText.replace(/[^a-zA-Z ]/g, "");
+      this.GetDothrakiWord(strippedTranslationPhrase);
     }
 
-    public GetDothrakiDictionay(){
-      
+    public GetDothrakiWord(PhraseJson){
+      var restUrl = "https://dothrakitranslatorservice.azurewebsites.net/api/HttpTriggerCSharp/phrase/"+ PhraseJson +"?code=mZwT4P00yS2J0wSCqivZzh0t7aZYInBRi63O0CBgYn/2i/H6hZNJkQ==";
+      console.log(restUrl);
+      fetch(restUrl)
+      .then((response) => response.json())
+      .catch((error) => console.warn("fetch error:", error))
+      .then((json) => {
+        var dothrakiWordJson:any = json;
+        this.setState({dothrakiWord: dothrakiWordJson.Dothraki});
+
+        var utterThis = new SpeechSynthesisUtterance(dothrakiWordJson.Dothraki);
+        utterThis.lang = "da-DK";
+        var synth = window.speechSynthesis;
+        synth.speak(utterThis);
+      })
     }
   }

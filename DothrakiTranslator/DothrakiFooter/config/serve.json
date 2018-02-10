@@ -1,0 +1,29 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://acdc1802.sharepoint.com/SitePages/FOoterTest.aspx",
+      "customActions": {
+        "eee8e70c-0abf-48b7-b214-fe2d475ea8b4": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "dothrakiFooter": {
+      "pageUrl": "https://acdc1802.sharepoint.com/SitePages/FOoterTest.aspx",
+      "customActions": {
+        "eee8e70c-0abf-48b7-b214-fe2d475ea8b4": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,7 +41,15 @@ namespace DothrakiTranslatorService
             public string Dothraki { get; set; }
         }
 
-        private static string JsonData = @"[
+        public class TranslationPhraseGroup
+        {
+            public string RecognitionStatus { get; set; }
+            public string DisplayText { get; set; }
+            public int Offset { get; set; }
+            public int Duration { get; set; }
+        }
+
+    private static string JsonData = @"[
     {
         ""English"":  ""about"",
         ""Dothraki"":  ""qisi""

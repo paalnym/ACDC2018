@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dothraki-footer-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/dothrakiFooter/DothrakiFooterApplicationCustomizer.js",
+          "manifest": "./src/extensions/dothrakiFooter/DothrakiFooterApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DothrakiFooterApplicationCustomizerStrings": "lib/extensions/dothrakiFooter/loc/{locale}.js"
+  }
+}
