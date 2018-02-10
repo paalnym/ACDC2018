@@ -22,7 +22,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
       return (
         <div className="row">
             <div className="col"> 
-                <h1>Dothraki translator</h1>
+                <Label>Dothraki translator</Label>
             </div>
             <div className="col"> 
                 <IconButton

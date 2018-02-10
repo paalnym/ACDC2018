@@ -21,6 +21,7 @@
     "bingspeech-api-client": "^2.4.1",
     "fs": "0.0.1-security",
     "jquery": "~3.3.1",
+    "microsoft-speech-browser-sdk": "0.0.12",
     "react": "15.6.2",
     "react-audio-recorder": "^2.0.0",
     "react-dom": "15.6.2",
