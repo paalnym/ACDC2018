@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="VSTS.DeploySPFxToAppCatalog.ps1" />
     <None Include="ExecuteProvisioning.ps1" />
     <None Include="packages.config" />
   </ItemGroup>
