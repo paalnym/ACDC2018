@@ -15,10 +15,10 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
         recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f"),
         dothrakiWord: "",
         englishWord: ""
-      }
+      };
     }
 
-    render() {
+   public render() {
       return (
         <div className="row">
             <div className="col"> 
@@ -49,7 +49,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
       );
     }
 
-    componentDidMount() {
+    public  componentDidMount() {
       this.Setup();
       var utterThis = new SpeechSynthesisUtterance("Welcome to the Dothraki translator, press the record button to start");
       utterThis.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name === "Google русский"; })[0];
@@ -120,7 +120,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
                   tokenDeferral.Reject(e.message);
               }
               return tokenDeferral.Promise();
-          }
+          };
 
           return new SDK.CognitiveTokenAuthentication(callback, callback);
       }();
@@ -200,7 +200,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
         recognizer: this.RecognizerSetup(SDK,"Interactive","en-US", "Simple" , "A40d6ac6354d414a9dc9739280ff526f"),
         dothrakiWord: "",
         englishWord: ""
-      }
+      };
     }
 
     public UpdateStatus(status) {
@@ -208,9 +208,8 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
     }
 
     public UpdateRecognizedHypothesis(text, append) {
-      if (append) 
       console.log("UPDATE RECOGNIZEdHypo", text);
-      this.setState({englishWord: text})
+      this.setState({englishWord: text});
     }
 
     public UpdateRecognizedPhrase(json) {
@@ -236,6 +235,6 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
         utterThis.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name === "Google русский"; })[0];
         var synth = window.speechSynthesis;
         synth.speak(utterThis);
-      })
+      });
     }
   }
