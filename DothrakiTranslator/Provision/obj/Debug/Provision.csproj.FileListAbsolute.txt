@@ -87,4 +87,3 @@ C:\ACDC2018\DothrakiTranslator\Provision\bin\Debug\zh-Hans\System.Spatial.resour
 C:\ACDC2018\DothrakiTranslator\Provision\bin\Debug\zh-Hant\System.Spatial.resources.dll
 C:\ACDC2018\DothrakiTranslator\Provision\obj\Debug\Provision.exe
 C:\ACDC2018\DothrakiTranslator\Provision\obj\Debug\Provision.pdb
-C:\ACDC2018\DothrakiTranslator\Provision\obj\Debug\Provision.csprojResolveAssemblyReference.cache
