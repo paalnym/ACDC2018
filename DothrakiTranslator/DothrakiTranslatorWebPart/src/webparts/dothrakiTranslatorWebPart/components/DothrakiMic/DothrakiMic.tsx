@@ -20,23 +20,41 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
 
     render() {
       return (
-        <div className='dothrakiMic-Recorder'>
-            <Label>Press to start translating</Label>
-            <IconButton
-              disabled={ this.state.startbtnDisabled }
-              checked={ this.state.stopbtnDisabled }
-              iconProps={ { iconName: 'Record2' } }
-              title='Record'
-              ariaLabel='Record'
-              onClick={this.startRecording}
-            />
-            <Label>{this.state.dothrakiWord}</Label>
+        <div className="row">
+            <div className="col"> 
+                <h1>Dothraki translator</h1>
+            </div>
+            <div className="col"> 
+                <IconButton
+                    disabled={ this.state.startbtnDisabled }
+                    checked={ this.state.stopbtnDisabled }
+                    iconProps={ { iconName: 'Record2' } }
+                    title='Record'
+                    ariaLabel='Record'
+                    onClick={this.startRecording}
+                />
+                <div className="col">
+                    <div className="row"> 
+                        <div className="col">
+                            <Label>English phrase spoken: {this.state.englishWord}</Label>
+                        </div>
+                        <div className="col">
+                            <Label>Dothraki translation: {this.state.dothrakiWord}</Label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
         </div>
       );
     }
 
     componentDidMount() {
       this.Setup();
+      var utterThis = new SpeechSynthesisUtterance("Welcome to the Dothraki translator, press the record button to start");
+      utterThis.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name === "Google русский"; })[0];
+      var synth = window.speechSynthesis;
+      synth.speak(utterThis);
     }
 
     public startRecording(){
@@ -192,6 +210,7 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
     public UpdateRecognizedHypothesis(text, append) {
       if (append) 
       console.log("UPDATE RECOGNIZEdHypo", text);
+      this.setState({englishWord: text})
     }
 
     public UpdateRecognizedPhrase(json) {
@@ -212,7 +231,9 @@ export default class DothrakiMic extends React.Component<IDothrakiMicProps, IDot
         this.setState({dothrakiWord: dothrakiWordJson.Dothraki});
 
         var utterThis = new SpeechSynthesisUtterance(dothrakiWordJson.Dothraki);
-        utterThis.lang = "da-DK";
+        
+        console.log(speechSynthesis);
+        utterThis.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name === "Google русский"; })[0];
         var synth = window.speechSynthesis;
         synth.speak(utterThis);
       })

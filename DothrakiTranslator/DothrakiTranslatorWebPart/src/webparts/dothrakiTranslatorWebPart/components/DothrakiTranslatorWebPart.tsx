@@ -8,7 +8,7 @@ export default class DothrakiTranslatorWebPart extends React.Component<IDothraki
   public render(): React.ReactElement<IDothrakiTranslatorWebPartProps> {
     return (
       <div className={ styles.dothrakiTranslatorWebPart }>
-        <div><DothrakiMic recognitionMode={""} language={""} format={""} subscriptionKey={""} /></div>
+        <div className={ styles.dothrakiTranslatorWebPartContainer}><DothrakiMic recognitionMode={""} language={""} format={""} subscriptionKey={""} /></div>
       </div>
     );
   }
